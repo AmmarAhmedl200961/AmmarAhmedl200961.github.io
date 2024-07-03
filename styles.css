@@ -8,11 +8,14 @@ body {
 }
 
 header {
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(38,70,83,1) 35%, rgba(42,157,143,1) 100%);
+    color: #fff;
+    padding: 1rem 0;
 }
 
 header h1, header p {
     margin: 0;
+    color: #fff;
 }
 
 .container {
@@ -22,15 +25,15 @@ header h1, header p {
 }
 
 h2 {
-    color: #007bff;
+    color: #264653;
 }
 
 h3 {
-    color: #343a40;
+    color: #2a9d8f;
 }
 
 footer {
-    background: #343a40;
+    background: #264653;
     color: #fff;
     padding: 1rem 0;
 }
