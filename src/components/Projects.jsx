@@ -93,7 +93,7 @@ const Projects = () => {
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-stretch"
           >
             {repos.map((repo, index) => {
               const isFeatured = featuredProjects.includes(repo.name);
@@ -105,7 +105,7 @@ const Projects = () => {
                     scale: 1.03,
                     y: -8
                   }}
-                  className="relative group"
+                  className="relative group w-full"
                 >
                   {/* Featured badge */}
                   {isFeatured && (
