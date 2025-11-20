@@ -11,44 +11,45 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: "Python / ML / DL",
+      title: "Agentic AI & Orchestration",
+      icon: Brain,
+      color: "from-neon-purple to-accent",
+      borderColor: "border-neon-purple",
+      skills: [
+        { name: "AI Agents / RAG", icon: Brain },
+        { name: "LangGraph / CrewAI", icon: Network },
+        { name: "Multi-Agent Orchestration", icon: Sparkles },
+        { name: "Vector Databases", icon: Database },
+        { name: "Stateful Workflows", icon: Code },
+        { name: "Generative AI", icon: Sparkles }
+      ]
+    },
+    {
+      title: "Cloud & FinOps Architecture",
+      icon: Cloud,
+      color: "from-neon-blue to-neon-purple",
+      borderColor: "border-neon-blue",
+      skills: [
+        { name: "FinOps (Cost Opt.)", icon: Zap },
+        { name: "AWS Architecture", icon: Cloud },
+        { name: "Kubernetes MLOps", icon: Cpu },
+        { name: "IaC (Terraform)", icon: FileCode },
+        { name: "Spot Instance Orchestration", icon: Network },
+        { name: "CI/CD for Data", icon: Terminal }
+      ]
+    },
+    {
+      title: "Advanced Data & Modeling",
       icon: Code,
       color: "from-accent to-neon-blue",
       borderColor: "border-accent",
       skills: [
-        { name: "Python", icon: Terminal },
-        { name: "Deep Learning", icon: Brain },
-        { name: "NLP", icon: FileCode },
-        { name: "Computer Vision", icon: Cpu },
-        { name: "Data Visualization", icon: Zap }
-      ]
-    },
-    {
-      title: "Generative AI",
-      icon: Sparkles,
-      color: "from-neon-blue to-neon-purple",
-      borderColor: "border-neon-blue",
-      skills: [
-        { name: "Generative AI", icon: Sparkles },
-        { name: "StableDiffusion", icon: Brain },
-        { name: "PyTorch", icon: Code },
-        { name: "CLIP", icon: Network },
-        { name: "Prompt Engineering", icon: Terminal },
-        { name: "RAG", icon: Database },
-        { name: "GraphRAG", icon: Network }
-      ]
-    },
-    {
-      title: "Tools / Cloud",
-      icon: Cloud,
-      color: "from-neon-purple to-accent",
-      borderColor: "border-neon-purple",
-      skills: [
-        { name: "AWS S3", icon: Cloud },
-        { name: "AWS Redshift", icon: Database },
-        { name: "AWS DynamoDB", icon: Database },
-        { name: "Web Scraping", icon: Code },
-        { name: "Big Data Analytics", icon: Cpu }
+        { name: "Stochastic Modeling", icon: Brain },
+        { name: "Bayesian Inference", icon: Cpu },
+        { name: "Computer Vision (Pose Est.)", icon: Network },
+        { name: "dbt (Data Governance)", icon: Database },
+        { name: "Data Observability", icon: Zap },
+        { name: "ELT Architecture", icon: FileCode }
       ]
     }
   ];
@@ -177,7 +178,7 @@ const Skills = () => {
             >
               {[...Array(3)].map((_, repetition) => (
                 <div key={repetition} className="flex gap-6">
-                  {['Python', 'PyTorch', 'TensorFlow', 'Generative AI', 'NLP', 'AWS', 'RAG', 'Deep Learning', 'Computer Vision', 'Big Data'].map((skill, idx) => (
+                  {['AI Agents', 'RAG', 'LangGraph', 'AWS Architecture', 'Kubernetes', 'FinOps', 'Terraform', 'Multi-Agent Systems', 'Vector DB', 'Bayesian Inference', 'dbt', 'MLOps'].map((skill, idx) => (
                     <div
                       key={idx}
                       className="flex-shrink-0 px-6 py-3 bg-gradient-to-r from-accent/20 to-neon-blue/20 border border-accent/30 rounded-full"
