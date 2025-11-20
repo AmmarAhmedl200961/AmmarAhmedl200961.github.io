@@ -25,17 +25,13 @@ const Skills = () => {
       ]
     },
     {
-      title: "Cloud & FinOps Architecture",
+      title: "Cloud Architecture",
       icon: Cloud,
       color: "from-neon-blue to-neon-purple",
       borderColor: "border-neon-blue",
       skills: [
-        { name: "FinOps (Cost Opt.)", icon: Zap },
         { name: "AWS Architecture", icon: Cloud },
         { name: "Kubernetes MLOps", icon: Cpu },
-        { name: "IaC (Terraform)", icon: FileCode },
-        { name: "Spot Instance Orchestration", icon: Network },
-        { name: "CI/CD for Data", icon: Terminal }
       ]
     },
     {
@@ -47,8 +43,6 @@ const Skills = () => {
         { name: "Stochastic Modeling", icon: Brain },
         { name: "Bayesian Inference", icon: Cpu },
         { name: "Computer Vision (Pose Est.)", icon: Network },
-        { name: "dbt (Data Governance)", icon: Database },
-        { name: "Data Observability", icon: Zap },
         { name: "ELT Architecture", icon: FileCode }
       ]
     }
@@ -143,8 +137,8 @@ const Skills = () => {
                     }}
                     className={`group flex items-center gap-2 px-4 py-2 bg-gradient-to-r ${category.color} bg-opacity-10 border ${category.borderColor}/50 rounded-full hover:bg-opacity-20 transition-all duration-300 cursor-pointer`}
                   >
-                    <skill.icon size={16} className={`text-transparent bg-clip-text bg-gradient-to-r ${category.color}`} />
-                    <span className="text-sm font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:${category.color}">
+                    <skill.icon size={16} className="text-white group-hover:text-accent transition-colors" />
+                    <span className="text-sm font-semibold text-white">
                       {skill.name}
                     </span>
                   </motion.div>
@@ -178,7 +172,7 @@ const Skills = () => {
             >
               {[...Array(3)].map((_, repetition) => (
                 <div key={repetition} className="flex gap-6">
-                  {['AI Agents', 'RAG', 'LangGraph', 'AWS Architecture', 'Kubernetes', 'FinOps', 'Terraform', 'Multi-Agent Systems', 'Vector DB', 'Bayesian Inference', 'dbt', 'MLOps'].map((skill, idx) => (
+                  {['Data Science', 'Machine Learning', 'Deep Learning', 'Generative AI', 'NLP', 'Computer Vision', 'Multi-Agent Systems', 'AI Agents', 'RAG', 'Stateful Workflows', 'MLOps', 'AWS Cloud Architecture', 'Vector Databases', 'ELT', 'CrewAI' , 'AutoGen', 'Bayesian Inference', 'Stochastic Modeling', 'Anomaly Detection', 'GAN/VAE', 'LangGraph', 'Kubernetes', 'Docker', 'PyTorch'].map((skill, idx) => (
                     <div
                       key={idx}
                       className="flex-shrink-0 px-6 py-3 bg-gradient-to-r from-accent/20 to-neon-blue/20 border border-accent/30 rounded-full"
