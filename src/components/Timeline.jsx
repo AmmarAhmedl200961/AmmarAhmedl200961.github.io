@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { GraduationCap, Briefcase, Award, FileText, Languages } from 'lucide-react';
+import { GraduationCap, Briefcase, Award, FileText, Languages, ExternalLink } from 'lucide-react';
 
 const Timeline = () => {
   const ref = useRef(null);
@@ -48,9 +48,37 @@ const Timeline = () => {
   ];
 
   const certificates = [
-    "AWS Academy Cloud Foundations",
-    "Containerization and Virtualization - Datacamp",
-    "Python Programmer Track - Datacamp"
+    {
+      name: "Ready Tensor Agentic AI Builder",
+      credentialId: "eb338598-3add-4a76-908e-193a655a1c1f",
+      link: "https://app.readytensor.ai/certificates/eb338598-3add-4a76-908e-193a655a1c1f",
+      featured: true
+    },
+    {
+      name: "AWS Academy Graduate - AWS Academy Cloud Foundations",
+      credentialId: "9e832aba-c055-4679-b3fd-61401a191ebf",
+      link: "https://www.credly.com/badges/9e832aba-c055-4679-b3fd-61401a191ebf/print",
+      featured: true
+    },
+    {
+      name: "Data Analysis Using Python",
+      credentialId: "3d1d18ab-be1b-4e8d-94d0-81c742db3320",
+      link: "https://www.credly.com/badges/3d1d18ab-be1b-4e8d-94d0-81c742db3320"
+    },
+    {
+      name: "Python for Data Science",
+      credentialId: "3d1d18ab-be1b-4e8d-94d0-81c742db3320",
+      link: "https://www.credly.com/badges/3d1d18ab-be1b-4e8d-94d0-81c742db3320"
+    },
+    {
+      name: "Python Developer Track",
+      credentialId: "#316,931",
+      link: "https://www.datacamp.com/completed/statement-of-accomplishment/track/7653fd473502608649fb0922929cb781c8aaae55"
+    },
+    {
+      name: "Containerization and Virtualization",
+      provider: "Datacamp"
+    }
   ];
 
   const languages = [
@@ -208,11 +236,53 @@ const Timeline = () => {
               {certificates.map((cert, idx) => (
                 <div
                   key={idx}
-                  className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-neon-blue/30 hover:border-neon-blue/50 transition-all"
+                  className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 border transition-all group hover:scale-105 ${
+                    cert.featured 
+                      ? 'border-accent/50 hover:border-accent hover:shadow-[0_0_20px_rgba(0,255,136,0.3)]' 
+                      : 'border-neon-blue/30 hover:border-neon-blue/50'
+                  }`}
                 >
-                  <p className="text-gray-300 text-sm">{cert}</p>
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="flex-1">
+                      {cert.link ? (
+                        <a
+                          href={cert.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-white font-semibold text-sm hover:text-accent transition-colors flex items-center gap-2 group-hover:underline"
+                        >
+                          {cert.featured && <span className="text-accent">⭐</span>}
+                          {cert.name}
+                          <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </a>
+                      ) : (
+                        <p className="text-white font-semibold text-sm">{cert.name}</p>
+                      )}
+                      {cert.credentialId && (
+                        <p className="text-xs text-gray-400 mt-1">
+                          Credential ID: <span className="text-neon-blue font-mono">{cert.credentialId}</span>
+                        </p>
+                      )}
+                      {cert.provider && (
+                        <p className="text-xs text-gray-400 mt-1">{cert.provider}</p>
+                      )}
+                    </div>
+                  </div>
                 </div>
               ))}
+              
+              {/* View All Certificates Link */}
+              <a
+                href="https://www.credly.com/users/ammar-ahmed-bsds-2020-fast-nu-lhr/badges"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-neon-blue/30 hover:border-neon-blue/50 transition-all text-center group"
+              >
+                <p className="text-neon-blue font-semibold text-sm flex items-center justify-center gap-2">
+                  View All on Credly
+                  <ExternalLink size={14} className="group-hover:translate-x-1 transition-transform" />
+                </p>
+              </a>
             </div>
           </motion.div>
 
