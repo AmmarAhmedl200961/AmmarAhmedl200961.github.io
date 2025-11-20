@@ -159,7 +159,7 @@ const Footer = () => {
             className="text-center text-gray-400 text-sm"
           >
             <p>© {currentYear} Ammar Ahmed. All rights reserved.</p>
-            <p className="text-xs mt-1">Built with React, Vite & Three.js</p>
+            <p className="text-xs mt-1">Built with Astro, React & Three.js</p>
           </motion.div>
 
           {/* Scroll to Top */}
