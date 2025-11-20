@@ -1,53 +1,86 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { 
-  Code, Brain, Sparkles, Cloud, Database, 
-  Terminal, Cpu, Network, Zap, FileCode
+import {
+  Bot,
+  Brain,
+  Blocks,
+  Cloud,
+  Code,
+  Cpu,
+  Database,
+  FileCode,
+  Gauge,
+  GitBranch,
+  Hammer,
+  History,
+  Image,
+  Layers,
+  Mic,
+  Monitor,
+  Network,
+  Sparkles,
+  Workflow,
+  Zap
 } from 'lucide-react';
-
 const Skills = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const skillCategories = [
-    {
-      title: "Agentic AI & Orchestration",
-      icon: Brain,
-      color: "from-neon-purple to-accent",
-      borderColor: "border-neon-purple",
-      skills: [
-        { name: "AI Agents / RAG", icon: Brain },
-        { name: "LangGraph / CrewAI", icon: Network },
-        { name: "Multi-Agent Orchestration", icon: Sparkles },
-        { name: "Vector Databases", icon: Database },
-        { name: "Stateful Workflows", icon: Code },
-        { name: "Generative AI", icon: Sparkles }
-      ]
-    },
-    {
-      title: "Cloud Architecture",
-      icon: Cloud,
-      color: "from-neon-blue to-neon-purple",
-      borderColor: "border-neon-blue",
-      skills: [
-        { name: "AWS Architecture", icon: Cloud },
-        { name: "Kubernetes MLOps", icon: Cpu },
-      ]
-    },
-    {
-      title: "Advanced Data & Modeling",
-      icon: Code,
-      color: "from-accent to-neon-blue",
-      borderColor: "border-accent",
-      skills: [
-        { name: "Stochastic Modeling", icon: Brain },
-        { name: "Bayesian Inference", icon: Cpu },
-        { name: "Computer Vision (Pose Est.)", icon: Network },
-        { name: "ELT Architecture", icon: FileCode }
-      ]
-    }
-  ];
-
+const skillCategories = [
+  {
+    title: "Agentic AI & Multi-Agent Systems",
+    icon: Brain,
+    color: "from-neon-purple to-pink-600",
+    borderColor: "border-neon-purple",
+    skills: [
+      { name: "CrewAI & Multi-Agent Orchestration", icon: Bot },
+      { name: "Computer Use / Sandbox Agents", icon: Monitor },
+      { name: "OpenAI Swarm / AutoGen", icon: Network },
+      { name: "Tool Calling & Function Execution", icon: Hammer },
+      { name: "ReAct + Plan-and-Execute", icon: Workflow },
+      { name: "Long-Term Memory & State Management", icon: History },
+      { name: "Multimodal Agents (Vision + Voice)", icon: Mic }
+    ]
+  },
+  {
+    title: "Advanced RAG & Retrieval",
+    icon: Database,
+    color: "from-purple-600 to-accent",
+    borderColor: "border-purple-600",
+    skills: [
+      { name: "RAG + GraphRAG", icon: GitBranch },
+      { name: "Hybrid Retrieval (Dense + BM25)", icon: Sparkles },
+      { name: "Contextual & Parent-Document Retrieval", icon: FileCode },
+      { name: "Vector DBs (Pinecone, Weaviate, Qdrant)", icon: Database },
+      { name: "Embedding Fine-tuning", icon: Gauge }
+    ]
+  },
+  {
+    title: "Cutting-Edge Model Architectures",
+    icon: Blocks,
+    color: "from-pink-600 to-orange-500",
+    borderColor: "border-pink-600",
+    skills: [
+      { name: "Mixture of Experts (MoE)", icon: Blocks },
+      { name: "LLaMA / Mistral Fine-tuning", icon: Cpu },
+      { name: "Vision Transformers & CLIP", icon: Image },
+      { name: "Stable Diffusion XL & Flux", icon: Sparkles },
+      { name: "Gemini Multimodal Extraction", icon: Zap }
+    ]
+  },
+  {
+    title: "Cloud, DevOps & Production",
+    icon: Cloud,
+    color: "from-neon-blue to-neon-purple",
+    borderColor: "border-neon-blue",
+    skills: [
+      { name: "AWS (S3, Redshift, DynamoDB, Bedrock)", icon: Cloud },
+      { name: "Docker & Containerization", icon: Layers },
+      { name: "Async Scraping & ETL Pipelines", icon: Workflow },
+      { name: "Model Deployment & Monitoring", icon: Zap }
+    ]
+  }
+];
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
