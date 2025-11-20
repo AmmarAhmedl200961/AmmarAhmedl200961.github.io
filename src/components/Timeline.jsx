@@ -20,7 +20,7 @@ const Timeline = () => {
       courses: [
         "Generative AI",
         "Deep Learning for Perception",
-        "Introduction to CLoud Computing AWS",
+        "Introduction to Cloud Computing AWS",
         "Natural Language Processing",
         "Data Mining",
         "Data Analysis and Visualization",
