@@ -12,12 +12,19 @@ const Timeline = () => {
       institution: "National University of Computer and Emerging Sciences (FAST-NUCES)",
       location: "Lahore, Pakistan",
       period: "June 2021 - June 2025",
+      fyp: {
+        name: "Migrate-AI",
+        description: "Final Year Project - AI-powered migration assistant",
+        link: "https://migrateai.vercel.app"
+      },
       courses: [
-        "Migrate-AI (FYP)",
-        "Natural Language Processing",
         "Generative AI",
-        "Big Data Analytics",
-        "Data Mining"
+        "Deep Learning for Perception",
+        "Introduction to CLoud Computing AWS",
+        "Natural Language Processing",
+        "Data Mining",
+        "Data Analysis and Visualization",
+        "Big Data Analytics"
       ]
     },
     {
@@ -62,8 +69,8 @@ const Timeline = () => {
     },
     {
       name: "Data Analysis Using Python",
-      credentialId: "3d1d18ab-be1b-4e8d-94d0-81c742db3320",
-      link: "https://www.credly.com/badges/3d1d18ab-be1b-4e8d-94d0-81c742db3320"
+      credentialId: "7611de03-61c1-49b4-b3e2-f8aad80a913f",
+      link: "https://www.credly.com/badges/7611de03-61c1-49b4-b3e2-f8aad80a913f"
     },
     {
       name: "Python for Data Science",
@@ -136,6 +143,36 @@ const Timeline = () => {
                   <p className="text-lg text-neon-blue mb-1">{edu.institution}</p>
                   <p className="text-gray-400 mb-1">{edu.location}</p>
                   <p className="text-accent font-semibold mb-3">{edu.period}</p>
+                  
+                  {/* Final Year Project */}
+                  {edu.fyp && (
+                    <div className="mt-4 mb-4">
+                      <a
+                        href={edu.fyp.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-block"
+                      >
+                        <div className="bg-gradient-to-r from-accent/20 to-neon-blue/20 border-2 border-accent rounded-lg p-4 hover:border-neon-blue hover:shadow-[0_0_20px_rgba(0,255,136,0.4)] transition-all">
+                          <div className="flex items-start justify-between gap-2">
+                            <div>
+                              <p className="text-sm text-gray-400 mb-1">🎓 Final Year Project</p>
+                              <h4 className="text-xl font-bold text-white group-hover:text-accent transition-colors flex items-center gap-2">
+                                {edu.fyp.name}
+                                <ExternalLink size={18} className="text-accent group-hover:translate-x-1 transition-transform" />
+                              </h4>
+                              <p className="text-sm text-gray-300 mt-1">{edu.fyp.description}</p>
+                            </div>
+                          </div>
+                          <div className="mt-3 text-xs text-accent font-semibold flex items-center gap-1">
+                            <span>🚀 Live Demo</span>
+                            <span className="opacity-60">→ migrateai.vercel.app</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  )}
+                  
                   {edu.courses && (
                     <div className="mt-4">
                       <p className="text-sm text-gray-400 mb-2">Key Courses:</p>

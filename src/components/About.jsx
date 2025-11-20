@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { TrendingUp, Target, Lightbulb } from 'lucide-react';
+import { TrendingUp, Target, Lightbulb, ExternalLink } from 'lucide-react';
 
 const About = () => {
   const ref = useRef(null);
@@ -76,11 +76,33 @@ const About = () => {
                 <span className="text-accent font-semibold">NLP</span>, and{' '}
                 <span className="text-neon-blue font-semibold">cloud computing</span>.
               </p>
-              <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-6">
                 Passionate about leveraging data to solve complex problems and deliver{' '}
                 <span className="text-accent font-semibold">actionable insights</span> that drive real-world impact.
                 From neural networks to generative models, I transform data into intelligent systems.
               </p>
+              
+              {/* Featured Project - Migrate-AI */}
+              <div className="mt-6 p-6 bg-gradient-to-r from-accent/10 to-neon-blue/10 border-2 border-accent/50 rounded-xl hover:border-accent hover:shadow-[0_0_30px_rgba(0,255,136,0.3)] transition-all">
+                <div className="flex items-start justify-between gap-4 flex-wrap">
+                  <div className="flex-1">
+                    <p className="text-sm text-accent font-semibold mb-2">🎓 FEATURED PROJECT</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">Migrate-AI</h3>
+                    <p className="text-gray-300 mb-3">
+                      AI-powered migration assistant - My Final Year Project showcasing advanced NLP and Generative AI capabilities
+                    </p>
+                  </div>
+                  <a
+                    href="https://migrateai.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-accent to-neon-blue rounded-full text-white font-semibold hover:shadow-[0_0_30px_rgba(0,255,136,0.5)] transition-all hover:scale-105"
+                  >
+                    <span>View Live</span>
+                    <ExternalLink size={18} className="group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+              </div>
             </div>
           </motion.div>
 
