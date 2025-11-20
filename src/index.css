@@ -3,13 +3,16 @@
 @tailwind utilities;
 
 :root {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background: #050816;
+  color: #ffffff;
+  overflow-x: hidden;
 }
 
 #root {
@@ -20,6 +23,14 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Utility Classes */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .line-clamp-3 {
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -27,6 +38,25 @@ body {
   overflow: hidden;
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0e27;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00ff88, #00d4ff);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00d4ff, #b794f6);
+}
+
+/* Animations */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -41,4 +71,17 @@ body {
 .animate-fade-in {
   animation: fade-in 1s ease-out;
 }
+
+/* Selection Color */
+::selection {
+  background-color: rgba(0, 255, 136, 0.3);
+  color: #ffffff;
+}
+
+/* Focus Styles */
+*:focus-visible {
+  outline: 2px solid #00ff88;
+  outline-offset: 2px;
+}
+
 

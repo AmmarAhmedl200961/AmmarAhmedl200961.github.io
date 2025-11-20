@@ -30,6 +30,25 @@ export const getAllRepos = async () => {
 };
 
 /**
+ * Fetch GitHub repositories (alias for compatibility)
+ */
+export const fetchGitHubRepos = async (username = USERNAME) => {
+  try {
+    const response = await axios.get(`${GITHUB_API}/users/${username}/repos`, {
+      params: {
+        sort: 'updated',
+        per_page: 100,
+        type: 'owner'
+      }
+    });
+    return response.data.filter(repo => !repo.fork);
+  } catch (error) {
+    console.error('Error fetching repositories:', error);
+    return [];
+  }
+};
+
+/**
  * Get the most recent 6 repositories
  */
 export const getRecentRepos = async () => {
