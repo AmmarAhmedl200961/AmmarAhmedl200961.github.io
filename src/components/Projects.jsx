@@ -1,8 +1,19 @@
 import { useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Star, GitFork, ExternalLink, Github, Loader } from 'lucide-react';
+import { Star, GitFork, ExternalLink, Github, Loader, Rocket, AlertCircle } from 'lucide-react';
 import { fetchGitHubRepos } from '../utils/github';
+
+// Manually defined featured full-stack project (private repo)
+const chronosDevTracker = {
+  id: 'chronos-devtracker',
+  name: 'Chronos DevTracker',
+  description: 'Portfolio-ready full-stack project management application showcasing TypeScript across React (Vite) frontend and Express + Prisma backend with PostgreSQL, JWT auth, and automated E2E tests (Playwright).',
+  demoUrl: 'https://ammarahmedl200961.github.io/chronos-devtracker-pm/',
+  apiUrl: 'https://chronos-devtracker-pm.onrender.com/api',
+  topics: ['TypeScript', 'React', 'Express', 'Prisma', 'PostgreSQL', 'Playwright'],
+  isFullStack: true,
+};
 
 const Projects = () => {
   const ref = useRef(null);
@@ -95,6 +106,84 @@ const Projects = () => {
             animate={isInView ? "visible" : "hidden"}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-stretch"
           >
+            {/* Chronos DevTracker - Featured Full-Stack Project Card */}
+            <motion.div
+              key={chronosDevTracker.id}
+              variants={cardVariants}
+              whileHover={{ 
+                scale: 1.03,
+                y: -8
+              }}
+              className="relative group w-full"
+            >
+              {/* Full-Stack badge */}
+              <div className="absolute -top-3 -right-3 z-10">
+                <div className="px-3 py-1 bg-gradient-to-r from-neon-purple to-accent rounded-full text-xs font-bold text-white shadow-lg flex items-center gap-1">
+                  <Rocket size={12} />
+                  FULL-STACK
+                </div>
+              </div>
+
+              {/* Card */}
+              <div className="h-full bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-neon-purple/50 transition-all duration-300 shadow-xl hover:shadow-[0_0_40px_rgba(183,148,246,0.2)] flex flex-col">
+                {/* Header with gradient accent */}
+                <div className="h-2 w-full rounded-full bg-gradient-to-r from-neon-purple to-accent mb-6"></div>
+
+                {/* Project Title */}
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-neon-purple transition-colors">
+                  {chronosDevTracker.name}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-400 mb-6 flex-grow">
+                  {chronosDevTracker.description}
+                </p>
+
+                {/* Topics/Tags */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {chronosDevTracker.topics.map((topic, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3 py-1 bg-neon-purple/20 border border-neon-purple/40 rounded-full text-xs text-neon-purple font-semibold"
+                    >
+                      {topic}
+                    </span>
+                  ))}
+                </div>
+
+                {/* API Notice */}
+                <div className="mb-4 p-3 bg-yellow-500/10 border border-yellow-500/30 rounded-lg">
+                  <div className="flex items-start gap-2 text-xs text-yellow-400">
+                    <AlertCircle size={14} className="mt-0.5 flex-shrink-0" />
+                    <span>
+                      API hosted on Render may be sleeping.{' '}
+                      <a 
+                        href={chronosDevTracker.apiUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:text-yellow-300 transition-colors"
+                      >
+                        Wake it up here
+                      </a>
+                    </span>
+                  </div>
+                </div>
+
+                {/* Links */}
+                <div className="flex items-center justify-end pt-4 border-t border-white/10">
+                  <a
+                    href={chronosDevTracker.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-neon-purple to-accent rounded-lg text-white font-semibold text-sm hover:shadow-[0_0_20px_rgba(183,148,246,0.5)] transition-all duration-300 hover:scale-105"
+                  >
+                    <ExternalLink size={16} />
+                    Live Demo
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+
             {repos.map((repo, index) => {
               const isFeatured = featuredProjects.includes(repo.name);
               return (
