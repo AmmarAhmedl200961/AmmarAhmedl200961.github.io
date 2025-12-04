@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, MapPin, Code, Brain, Cloud, Sparkles } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Code, Brain, Cloud, Sparkles, ArrowRight } from 'lucide-react';
 import Hero3D from './Hero3D';
 
 const Hero = () => {
@@ -71,27 +71,24 @@ const Hero = () => {
             transition={{ delay: 0.2, duration: 1 }}
           >
             <span className="inline-block px-4 py-2 rounded-full bg-accent/20 border border-accent/50 text-accent text-sm font-semibold mb-4">
-              Welcome to the Future of Data
+              Agentic AI Consultant
             </span>
           </motion.div>
 
           <motion.h1 
-            className="text-6xl md:text-8xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-accent via-neon-blue to-neon-purple"
+            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            Ammar Ahmed
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-400">
+              I build Agentic AI systems
+            </span>
+            <br />
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent via-neon-blue to-neon-purple">
+              that replace entire teams
+            </span>
           </motion.h1>
-
-          <motion.h2 
-            className="text-3xl md:text-4xl text-white mb-6 font-light"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-          >
-            Deep Learning Artisan | Generative AI Architect
-          </motion.h2>
 
           <motion.p 
             className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed"
@@ -99,27 +96,50 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            Transforming raw data into intelligent systems. Specializing in{' '}
-            <span className="text-accent font-semibold">Machine Learning</span>,{' '}
-            <span className="text-neon-blue font-semibold">Deep Learning</span>,{' '}
-            <span className="text-neon-purple font-semibold">NLP</span>, and{' '}
-            <span className="text-accent font-semibold">Generative AI</span>.
+            Automate complex workflows, eliminate manual tasks, and scale your operations 
+            with intelligent AI agents that work 24/7.
           </motion.p>
 
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <motion.div
-            className="mb-12"
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6, duration: 0.5 }}
           >
             <a 
-              href="#projects"
-              className="group relative inline-block px-12 py-5 text-lg font-bold text-dark-bg bg-gradient-to-r from-accent to-neon-blue rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(0,255,136,0.6)]"
+              href="#booking"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-bold text-dark-bg bg-gradient-to-r from-accent to-neon-blue rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(0,255,136,0.6)]"
             >
-              <span className="relative z-10">Transform Your Data</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-neon-blue to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              Book Free Consultation
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </a>
+            <a 
+              href="#case-studies"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold text-white border border-white/20 rounded-full hover:bg-white/5 transition-all duration-300"
+            >
+              View Case Studies
+            </a>
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div 
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 0.8 }}
+          >
+            {[
+              { value: '500+', label: 'Hours Saved Monthly' },
+              { value: '$2.5M+', label: 'Client Value Generated' },
+              { value: '15+', label: 'AI Agents Deployed' },
+              { value: '98%', label: 'Automation Accuracy' },
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-2xl md:text-3xl font-bold text-accent">{stat.value}</div>
+                <div className="text-xs md:text-sm text-gray-400 mt-1">{stat.label}</div>
+              </div>
+            ))}
           </motion.div>
 
           {/* Social Links */}
@@ -127,7 +147,7 @@ const Hero = () => {
             className="flex flex-wrap justify-center gap-4 mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
           >
             {[
               { Icon: Github, href: 'https://github.com/AmmarAhm3d', label: 'GitHub' },
@@ -158,7 +178,7 @@ const Hero = () => {
             className="flex items-center justify-center gap-2 text-gray-400"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
+            transition={{ delay: 0.9, duration: 0.8 }}
           >
             <MapPin size={18} />
             <span>Lahore, Pakistan</span>

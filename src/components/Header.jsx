@@ -20,7 +20,7 @@ const Header = () => {
         
         <div className="flex flex-wrap justify-center gap-4 mb-8">
           <a 
-            href="https://github.com/AmmarAhm3d" 
+            href="https://github.com/AmmarAhmedl200961" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-white text-secondary px-6 py-3 rounded-lg hover:bg-gray-100 transition-all transform hover:scale-105"
