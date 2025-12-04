@@ -1,4 +1,4 @@
-# AmmarAhmedl200961.github.io
+# AmmarAhm3d.github.io
 
 Welcome to my personal portfolio site - built with Astro, React, and Three.js.
 

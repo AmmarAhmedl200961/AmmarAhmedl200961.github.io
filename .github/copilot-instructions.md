@@ -1,5 +1,5 @@
-<!-- Copilot / AI coding agent instructions for AmmarAhmedl200961.github.io -->
-# Quick Agent Guide — AmmarAhmedl200961.github.io
+<!-- Copilot / AI coding agent instructions for AmmarAhm3d.github.io -->
+# Quick Agent Guide — AmmarAhm3d.github.io
 
 This repository is a simple personal GitHub Pages site. The guidance below is focused, actionable, and specific to this codebase so an AI coding agent can be immediately productive.
 

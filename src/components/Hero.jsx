@@ -130,7 +130,7 @@ const Hero = () => {
             transition={{ delay: 0.7, duration: 0.8 }}
           >
             {[
-              { Icon: Github, href: 'https://github.com/AmmarAhmedl200961', label: 'GitHub' },
+              { Icon: Github, href: 'https://github.com/AmmarAhm3d', label: 'GitHub' },
               { Icon: Linkedin, href: 'https://www.linkedin.com/in/ammar-ahmed-', label: 'LinkedIn' },
               { Icon: Mail, href: 'mailto:ammar.ahmed.paki@gmail.com', label: 'Email' }
             ].map(({ Icon, href, label }, i) => (
