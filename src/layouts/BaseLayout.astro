@@ -23,11 +23,28 @@ const {
     <script is:inline>
       // Redirect from old username to new username
       (function() {
-        const oldHostname = 'ammarahmedl200961.github.io';
-        const newHostname = 'ammarahm3d.github.io';
+        var oldHostname = 'ammarahmedl200961.github.io';
+        var newHostname = 'ammarahm3d.github.io';
         if (window.location.hostname.toLowerCase() === oldHostname) {
-          const newUrl = window.location.href.replace(oldHostname, newHostname);
-          document.write('<div style="position:fixed;top:0;left:0;right:0;bottom:0;background:#0f172a;color:#00ff88;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:system-ui,sans-serif;z-index:9999;"><p style="font-size:1.5rem;margin-bottom:1rem;">Redirecting to new site...</p><p style="font-size:1rem;opacity:0.8;">The site has moved to ' + newHostname + '</p></div>');
+          var newUrl = window.location.href.replace(oldHostname, newHostname);
+          
+          // Create redirect overlay using DOM manipulation
+          var overlay = document.createElement('div');
+          overlay.id = 'redirect-overlay';
+          overlay.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;background:#0f172a;color:#00ff88;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:system-ui,sans-serif;z-index:9999;';
+          
+          var title = document.createElement('p');
+          title.style.cssText = 'font-size:1.5rem;margin-bottom:1rem;';
+          title.textContent = 'Redirecting to new site...';
+          
+          var subtitle = document.createElement('p');
+          subtitle.style.cssText = 'font-size:1rem;opacity:0.8;';
+          subtitle.textContent = 'The site has moved to ' + newHostname;
+          
+          overlay.appendChild(title);
+          overlay.appendChild(subtitle);
+          document.documentElement.appendChild(overlay);
+          
           setTimeout(function() {
             window.location.replace(newUrl);
           }, 1500);
