@@ -100,11 +100,11 @@ const CaseStudies = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Case <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-neon-blue">Studies</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-accent to-neon-blue mx-auto mb-6" />
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-gradient-to-r from-accent to-neon-blue mx-auto mb-4" />
+          <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
             Real results from AI automation projects that transformed businesses
           </p>
         </motion.div>
@@ -171,25 +171,25 @@ const CaseStudies = () => {
           className="mt-16 p-8 bg-gradient-to-r from-accent/10 to-neon-blue/10 border border-accent/20 rounded-2xl"
         >
           <div className="text-center mb-6">
-            <Brain size={40} className="text-accent mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-white">Previous Clients Results</h3>
+            <Brain size={32} className="text-accent mx-auto mb-3" />
+            <h3 className="text-xl md:text-2xl font-bold text-white">Previous Clients Results</h3>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-4xl font-bold text-accent">2,400+</div>
-              <div className="text-gray-400">Hours Saved Monthly</div>
+              <div className="text-2xl md:text-3xl font-bold text-accent">2,400+</div>
+              <div className="text-sm text-gray-400">Hours Saved Monthly</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-neon-blue">$1.5M+</div>
-              <div className="text-gray-400">Annual Client Savings</div>
+              <div className="text-2xl md:text-3xl font-bold text-neon-blue">$1.5M+</div>
+              <div className="text-sm text-gray-400">Annual Client Savings</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-neon-purple">50+</div>
-              <div className="text-gray-400">AI Agents Built</div>
+              <div className="text-2xl md:text-3xl font-bold text-neon-purple">50+</div>
+              <div className="text-sm text-gray-400">AI Agents Built</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-accent">99.2%</div>
-              <div className="text-gray-400">Client Satisfaction</div>
+              <div className="text-2xl md:text-3xl font-bold text-accent">99.2%</div>
+              <div className="text-sm text-gray-400">Client Satisfaction</div>
             </div>
           </div>
         </motion.div>

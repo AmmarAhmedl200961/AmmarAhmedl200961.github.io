@@ -86,11 +86,11 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Featured <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-neon-blue">Projects</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-accent to-neon-blue mx-auto mb-6"></div>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-gradient-to-r from-accent to-neon-blue mx-auto mb-4"></div>
+          <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
             Transforming ideas into intelligent solutions through code
           </p>
         </motion.div>

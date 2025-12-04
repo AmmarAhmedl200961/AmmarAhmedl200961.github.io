@@ -59,24 +59,24 @@ const About = () => {
           animate={isInView ? "visible" : "hidden"}
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <motion.div variants={itemVariants} className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               About <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-neon-blue">Me</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-accent to-neon-blue mx-auto mb-8"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-accent to-neon-blue mx-auto mb-6"></div>
           </motion.div>
 
           {/* Main Bio */}
-          <motion.div variants={itemVariants} className="mb-16">
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 md:p-12 border border-white/10 shadow-[0_0_50px_rgba(0,255,136,0.1)]">
-              <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-6">
+          <motion.div variants={itemVariants} className="mb-12">
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 md:p-10 border border-white/10 shadow-[0_0_50px_rgba(0,255,136,0.1)]">
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-4">
                 Aspiring <span className="text-accent font-semibold">Data Scientist</span> with expertise in{' '}
                 <span className="text-neon-blue font-semibold">machine learning</span>,{' '}
                 <span className="text-neon-purple font-semibold">deep learning</span>,{' '}
                 <span className="text-accent font-semibold">NLP</span>, and{' '}
                 <span className="text-neon-blue font-semibold">cloud computing</span>.
               </p>
-              <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-6">
+              <p className="text-base md:text-lg text-gray-400 leading-relaxed mb-4">
                 Passionate about leveraging data to solve complex problems and deliver{' '}
                 <span className="text-accent font-semibold">actionable insights</span> that drive real-world impact.
                 From neural networks to generative models, I transform data into intelligent systems.

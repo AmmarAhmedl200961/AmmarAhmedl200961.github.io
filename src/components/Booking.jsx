@@ -41,14 +41,14 @@ const Booking = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/30 text-accent text-sm font-medium mb-6">
-            <Calendar size={16} />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/30 text-accent text-xs font-medium mb-4">
+            <Calendar size={14} />
             Free Consultation
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
             Book Your <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-neon-blue">Free 15-min</span> AI Consultation
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
             Let's discuss how AI agents can transform your business operations
           </p>
         </motion.div>
