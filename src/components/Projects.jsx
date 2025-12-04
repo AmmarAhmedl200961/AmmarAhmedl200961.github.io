@@ -9,7 +9,7 @@ const chronosDevTracker = {
   id: 'chronos-devtracker',
   name: 'Chronos DevTracker',
   description: 'Portfolio-ready full-stack project management application showcasing TypeScript across React (Vite) frontend and Express + Prisma backend with PostgreSQL, JWT auth, and automated E2E tests (Playwright).',
-  demoUrl: 'https://ammarahmedl200961.github.io/chronos-devtracker-pm/',
+  demoUrl: 'https://ammarahm3d.github.io/chronos-devtracker-pm/',
   apiUrl: 'https://chronos-devtracker-pm.onrender.com/api',
   topics: ['TypeScript', 'React', 'Express', 'Prisma', 'PostgreSQL', 'Playwright'],
   isFullStack: true,
@@ -27,7 +27,7 @@ const Projects = () => {
   useEffect(() => {
     const loadRepos = async () => {
       try {
-        const data = await fetchGitHubRepos('AmmarAhmedl200961');
+        const data = await fetchGitHubRepos('AmmarAhm3d');
         // Filter and sort to show featured projects first
         const sorted = data.sort((a, b) => {
           const aFeatured = featuredProjects.includes(a.name);
@@ -86,11 +86,11 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Featured <span className="bg-clip-text text-transparent bg-gradient-to-r from-accent to-neon-blue">Projects</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-accent to-neon-blue mx-auto mb-6"></div>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-gradient-to-r from-accent to-neon-blue mx-auto mb-4"></div>
+          <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
             Transforming ideas into intelligent solutions through code
           </p>
         </motion.div>
@@ -289,7 +289,7 @@ const Projects = () => {
           className="text-center mt-12"
         >
           <a
-            href="https://github.com/AmmarAhmedl200961?tab=repositories"
+            href="https://github.com/AmmarAhm3d?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-neon-blue rounded-full text-white font-semibold hover:shadow-[0_0_40px_rgba(0,255,136,0.5)] transition-all duration-300 hover:scale-105"

@@ -1,14 +1,26 @@
-# AmmarAhmedl200961.github.io
+# AmmarAhm3d.github.io
 
-Welcome to my personal portfolio site - built with Astro, React, and Three.js.
+Personal portfolio site - Agentic AI Consultant
+
+**"I build Agentic AI systems that replace entire teams"**
 
 ## Tech Stack
 
-- **Astro** - Static site generator
+- **Astro** - Fast static site generator
 - **React** - Interactive components
 - **Tailwind CSS** - Styling
-- **Three.js** - 3D graphics
 - **Framer Motion** - Animations
+- **Three.js** - 3D graphics
+
+## Features
+
+- Hero with compelling tagline and stats
+- Case studies showcasing AI automation projects
+- Tech stack and skills display
+- Education and experience timeline
+- GitHub projects integration
+- Calendly integration for booking consultations
+- WhatsApp floating button for quick contact
 
 ## Development
 
@@ -23,4 +35,7 @@ npm run dev
 npm run build
 ```
 
-The built site will be in the `dist/` directory.
+## Links
+
+- Calendly: [calendly.com/ammarahm3d](https://calendly.com/ammarahm3d)
+- WhatsApp: [+92 336 5442539](https://api.whatsapp.com/send/?phone=%2B923365442539)

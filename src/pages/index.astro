@@ -2,20 +2,26 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import CaseStudies from '../components/CaseStudies';
 import Skills from '../components/Skills';
 import Timeline from '../components/Timeline';
 import Projects from '../components/Projects';
+import Booking from '../components/Booking';
 import Footer from '../components/Footer';
+import WhatsAppButton from '../components/WhatsAppButton';
 import '../index.css';
 ---
 
 <BaseLayout>
   <div class="min-h-screen bg-dark-bg">
     <Hero client:load />
+    <CaseStudies client:load />
     <About client:load />
     <Skills client:load />
     <Timeline client:load />
     <Projects client:load />
+    <Booking client:load />
     <Footer client:load />
+    <WhatsAppButton client:load />
   </div>
 </BaseLayout>

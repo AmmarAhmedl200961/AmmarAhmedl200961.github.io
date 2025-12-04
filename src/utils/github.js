@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const GITHUB_API = 'https://api.github.com';
-const USERNAME = 'AmmarAhmedl200961';
+const USERNAME = 'AmmarAhm3d';
 
 // Featured repositories list
 const FEATURED_REPOS = [
