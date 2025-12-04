@@ -3,4 +3,4 @@ To see the favicon:
 2. Close and reopen the browser tab
 3. Or use incognito/private mode
 
-The favicon.svg is live at: https://ammarahmedl200961.github.io/favicon.svg
+The favicon.svg is live at: https://ammarahm3d.github.io/favicon.svg
