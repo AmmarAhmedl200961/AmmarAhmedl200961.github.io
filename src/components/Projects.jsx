@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Star, GitFork, ExternalLink, Github, Loader, Rocket, AlertCircle } from 'lucide-react';
+import { Star, GitFork, ExternalLink, Github, Loader, Rocket } from 'lucide-react';
 import { fetchGitHubRepos } from '../utils/github';
 
 // Manually defined featured full-stack project (private repo)
@@ -10,7 +10,7 @@ const chronosDevTracker = {
   name: 'Chronos DevTracker',
   description: 'Portfolio-ready full-stack project management application showcasing TypeScript across React (Vite) frontend and Express + Prisma backend with PostgreSQL, JWT auth, and automated E2E tests (Playwright).',
   demoUrl: 'https://ammarahm3d.github.io/chronos-devtracker-pm/',
-  apiUrl: 'https://chronos-devtracker-pm.onrender.com/api',
+  apiUrl: 'https://chronos-devtracker-api.ammar-ahmed-paki.workers.dev/',
   topics: ['TypeScript', 'React', 'Express', 'Prisma', 'PostgreSQL', 'Playwright'],
   isFullStack: true,
 };
@@ -152,18 +152,18 @@ const Projects = () => {
                 </div>
 
                 {/* API Notice */}
-                <div className="mb-4 p-3 bg-yellow-500/10 border border-yellow-500/30 rounded-lg">
-                  <div className="flex items-start gap-2 text-xs text-yellow-400">
-                    <AlertCircle size={14} className="mt-0.5 flex-shrink-0" />
+                <div className="mb-4 p-3 bg-green-500/10 border border-green-500/30 rounded-lg">
+                  <div className="flex items-start gap-2 text-xs text-green-400">
+                    <Rocket size={14} className="mt-0.5 flex-shrink-0" />
                     <span>
-                      API hosted on Render may be sleeping.{' '}
+                      API deployed on Cloudflare Workers edge network with Prisma Accelerate. Cold start double whammy mitigated for instant responses globally.{' '}
                       <a 
                         href={chronosDevTracker.apiUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="underline hover:text-yellow-300 transition-colors"
+                        className="underline hover:text-green-300 transition-colors"
                       >
-                        Wake it up here
+                        Test the edge API
                       </a>
                     </span>
                   </div>
